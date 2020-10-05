@@ -734,11 +734,15 @@ socket.on('receivedAck', function (data) {
 })
     
     //changes to remove
+        socket.on('receivedAck1', function (data) {
+            console.log("1st message received : ");
+            console.log("1st acknwoledge received : ");
+        })
+        
         socket.on('receivedAck2', function (data) {
             console.log("2nd message received : ");
             console.log("2nd acknwoledge received : ");
         })
-        
         
       //changes to remove
    
