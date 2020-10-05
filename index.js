@@ -756,6 +756,11 @@ socket.on('receivedAck', function (data) {
             console.log("5th acknwoledge received : ");
         })
     
+        socket.on('receivedAck6', function (data) {
+            console.log("6th message received : ");
+            console.log("6th acknwoledge received : ");
+        })
+    
         socket.on('receivedAck7', function (data) {
             console.log("7th message received : ");
             console.log("7th acknwoledge received : ");
