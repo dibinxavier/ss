@@ -738,25 +738,11 @@ socket.on('receivedAck', function (data) {
             console.log("1st message received : ");
             console.log("1st acknwoledge received : ");
         })
-        socket.on('receivedAck2', function (data) {
-            console.log("2nd message received : ");
-            console.log("2nd acknwoledge received : ");
-        })
-
-
-        socket.on('receivedAck3', function (data) {
-            console.log("3rd message received : ");
-            console.log("3rd acknwoledge received : ");
-        })
     
-        socket.on('receivedAck4', function (data) {
-            console.log("4th message received : ");
-            console.log("4th acknwoledge received : ");
-        })
     
-        socket.on('receivedAck5', function (data) {
-            console.log("5th message received : ");
-            console.log("5th acknwoledge received : ");
+        socket.on('receivedAck22', function (data) {
+            console.log("22nd message received : ");
+            console.log("22nd acknwoledge received : ");
         })
       //changes to remove
    
