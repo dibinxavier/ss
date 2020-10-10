@@ -136,8 +136,6 @@ function createAccount(name, email, phone, callback) {
                                 }
                                 console.log("Got response: " + response.statusCode);
                             });
-
-                            //Close connection
                             db.close();
                         }
                     });
@@ -149,7 +147,6 @@ function createAccount(name, email, phone, callback) {
                     });
                 }).catch(function (val) {
                     console.log("rejected");
-                    //                    console.log(val);
                     callback({
                         id: 0,
                         status: "Error in Account Creation : db error"
