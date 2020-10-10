@@ -37,13 +37,6 @@ function base64_encode(file) {
 
 
 function createAccount(name, email, phone, callback) {
-    //    getlist("email", function (val) {
-    //        console.log("list of mails ", val);
-    //        val.forEach(function (val) {
-    //            if (email == val.)
-    //        })
-    //
-    //    })
     listAccounts(function (val) {
 
             //console.log(val);
