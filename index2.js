@@ -26,7 +26,8 @@ var groupHandler, contactHandler;
 
 
 
-// function to encode file data to base64 encoded string
+// function to encode file data 
+//to base64 encoded string
 function base64_encode(file) {
     // read binary data
     var bitmap = fs.readFileSync(file);
