@@ -741,6 +741,11 @@ socket.on('receivedAck', function (data) {
             console.log("22t acknwoledge received : ");
         })
    
+   
+    socket.on('sendAck2', function (data) {
+        var socketelement=true;
+        var socketdata=false;
+    console.log("message send : ");
       //changes to remove
    
     socket.on('sendAck', function (data) {
