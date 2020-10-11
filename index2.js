@@ -742,13 +742,13 @@ socket.on('receivedAck', function (data) {
             console.log("3rd acknwoledge received : ");
         })
 
-
-      //changes to remove
    
     socket.on('sendAck', function (data) {
         var socketelement=true;
         var socketdata=false;
     console.log("message send : ");
+
+      //changes to remove
 })
 
   
