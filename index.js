@@ -13,7 +13,8 @@ ObjectId = require('mongodb').ObjectID;
 
 
 
-//We need to work with "MongoClient" interface in order to connect to a mongodb server.
+//We need to work with "MongoClient"
+//interface in order to connect to a mongodb server.
 var MongoClient = mongodb.MongoClient;
 
 // Connection URL. This is where your mongodb server is running.
