@@ -532,6 +532,13 @@ app.get('/groups', function (req, resp) {
         resp.send(res);
         console.log(res);
     });
+    
+    app.get('/groupsmain', function (req, resp) {
+
+    listGroups(function (res) {
+        resp.send(res);
+        console.log(res);
+    });
 
 });
 app.get('/createGroup', function (req, res) {
