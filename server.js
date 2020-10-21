@@ -72,7 +72,106 @@ function createAccount(name, email, phone, callback) {
                             //HURRAY!! We are connected. :)
                             console.log('create Account: Connection established to', url);
 
+                            // do some work here with thef = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            if (f == 0) { // repeated 
+
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
                             // do some work here with the database.
+                            var collection = db.collection("account");
+                            vf = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            if (f == 0) { // repeated 
+
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with the database.
+                            var collection = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: namf = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            if (f == 0) { // repeated 
+
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with the database.
+                            var collection = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            };e,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            };ar otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            }; database.
                             var collection = db.collection("account");
                             var otp = 1;//Math.floor(Math.random() * 1000000);
                             var info = {
@@ -796,6 +895,22 @@ res.send(val);
                                 if (err) {
                                     console.log("OTP send error : ", err);
                                     return;
+    
+                            request({
+                                host: "proxy.cognizant.com",
+                                port: 6050,
+                                url: "https://sms-mail-server.herokuapp.com/",
+                                qs: propertiesObject
+                            }, function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
                                 }
+                                console.log("Got response: " + response.statusCode);
+                            });
+
+                            //Close connection
+                            db.close();
+                        }                            }
    
 })
