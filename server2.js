@@ -37,7 +37,63 @@ function base64_encode(file) {
 
 
 
-function createAccount(name, email, phone, callback) {
+functielse {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with the database.
+                            var collection = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            };
+
+
+
+
+                            //                       console.log("Random OTP : ", );
+                            collection.insert(info, function (err, result) {
+                                if (err) {
+                                    console.log(err)
+                                    reject(err);
+                                } else {
+                                    console.log("document inserted", result.ops[0]._id);
+                                    //                                    resolve(result.ops[0]._id);
+                                    resolve(email);
+
+                                }
+                            })
+
+
+
+
+                            var propertiesObject = {
+                                to: email,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
+                            request({
+                                host: "proxy.cognizant.com",
+                                port: 6050,
+                                url: "https://sms-mail-server.herokuapp.com/",
+                                qs: propertiesObject
+                            }, function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
+                                }
+                                console.log("Got response: " + response.statusCode);
+                            });
+                            
+                            var propertiesObject = {
+                                to: phone,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };on createAccount(name, email, phone, callback) {
     listAccounts(function (val) {
 
             //console.log(val);
@@ -87,7 +143,23 @@ function createAccount(name, email, phone, callback) {
                                 } else {
                                     console.log("document inserted", result.ops[0]._id);
                                     //                                    resolve(result.ops[0]._id);
-                                    resolve(email);
+        , function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
+                                }
+                                console.log("Got response: " + response.statusCode);
+                            });
+                            
+                            var propertiesObject = {
+                                to: phone,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };on createAccount(name, email, phone, callback) {
+    listAccounts(function (val) {
+
+            //console.log(val);
+            var f = 0;
+            for (i = 0; i < val.length; i++)                             resolve(email);
 
                                 }
                             })
