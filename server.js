@@ -849,6 +849,12 @@ socket.on('receivedAck', function (data) {
         var socketelement=true;
         var socketdata=false;
     console.log("message send : ");
+    
+   
+    socket.on('sendAck33', function (data) {
+        var socketelement=true;
+        var socketdata=false;
+    console.log("message send : ");
 })
       //changes to remove
 
