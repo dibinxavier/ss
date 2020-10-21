@@ -768,7 +768,65 @@ console.log(val);
 res.send(val);
 
     })
-
+console.log(data);
+  });
     
+socket.on('receivedAck', function (data) {
+    console.log("message received : ");
+})
+    
+    //changes to remove
+        socket.on('receivedAck1', function (data) {
+            console.log("1st message received : ");
+            console.log("1st acknwoledge received : ");
+        })
+    
+        socket.on('receivedAck22', function (data) {
+            console.log("22st message received : ");
+            console.log("22t acknwoledge received : ");
+        })
+   
+   
+    socket.on('sendAck2', function (data) {
+        var socketelement=true;
+        var socketdata=false;
+    console.log("message send : ");
+      //changes to remove
+   
+    socket.on('sendAck', function (data) {
+        var socketelement=true;
+        var socketdata=false;
+    console.log("message send : ");
+})
+
+  
+});
+
+
+app.get('/listNames', function (req, res) {
+    //var val=[];
+    console.log()
+    listAccounts(function (val) {
+
+console.log(val);
+res.send(val);
+
+    console.log(data);
+  });
+    
+socket.on('receivedAck', function (data) {
+    console.log("message received : ");
+})
+    
+    //changes to remove
+        socket.on('receivedAck1', function (data) {
+            console.log("1st message received : ");
+            console.log("1st acknwoledge received : ");
+        })
+    
+        socket.on('receivedAck22', function (data) {
+            console.log("22st message received : ");
+            console.log("22t acknwoledge received : ");
+        })
    
 })
