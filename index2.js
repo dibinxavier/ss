@@ -10,6 +10,8 @@ var fileUpload = require('express-fileupload');
 var fs = require('fs');
 var im = require('imagemagick');
 ObjectId = require('mongodb').ObjectID;
+// new command
+console.log("test")
 
 
 
