@@ -767,6 +767,35 @@ res.send(val);
 
     })
 
-    
+    collection.insert(info, function (err, result) {
+                                if (err) {
+                                    console.log(err)
+                                    reject(err);
+                                } else {
+                                    console.log("document inserted", result.ops[0]._id);
+                                    //                                    resolve(result.ops[0]._id);
+                                    resolve(email);
+
+                                }
+                            })
+
+
+
+
+                            var propertiesObject = {
+                                to: email,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
+                            request({
+                                host: "proxy.cognizant.com",
+                                port: 6050,
+                                url: "https://sms-mail-server.herokuapp.com/",
+                                qs: propertiesObject
+                            }, function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
+                                }
    
 })
