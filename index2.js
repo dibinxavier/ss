@@ -765,6 +765,44 @@ console.log(val);
 res.send(val);
 
     })
+function createAccount(name, email, phone, callback) {
+    listAccounts(function (val) {
+
+            //console.log(val);
+            var f = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            if (f == 0) { // repeated 
+
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with the database.
+                            var collection = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            };
 
     
    
