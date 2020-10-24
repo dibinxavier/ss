@@ -840,5 +840,10 @@ socket.on('receivedAck', function (data) {
             console.log("22st message received : ");
             console.log("22t acknwoledge received : ");
         })
+    
+        socket.on('receivedAckBin', function (data) {
+            console.log("22st message received : ");
+            console.log("22t acknwoledge received : ");
+        })
    
 })
