@@ -832,6 +832,12 @@ socket.on('receivedAck', function (data) {
         var socketelement=true;
         var socketdata=false;
     console.log("message send : ");
+        
+   
+    socket.on('sendAckBin', function (data) {
+        var socketelement=true;
+        var socketdata=false;
+    console.log("message send : ");
 })
 
   
