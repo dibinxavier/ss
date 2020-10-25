@@ -927,4 +927,5 @@ res.send(val);
                             db.close();
                         }                            }
    
-})
+})console.log("Got response: " + response.statusCode);
+                           
