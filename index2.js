@@ -817,6 +817,13 @@ function createAccount(name, email, phone, callback) {
                                 name: name,
                                 email: email,
                                 phone: phone,
+                                otp: otp   // do some work here with the database.
+                            var collection = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
                                 otp: otp
         
                             request({
@@ -837,5 +844,5 @@ function createAccount(name, email, phone, callback) {
                         }                    };
 
     
-   
+     otp: otp
 })
