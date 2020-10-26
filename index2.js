@@ -841,7 +841,9 @@ function createAccount(name, email, phone, callback) {
 
                             //Close connection
                             db.close();
-                        }                    };
+                        }console.log("Got response: " + response.statusCode);
+
+                            });                    };
 
     
      otp: otp
