@@ -852,5 +852,7 @@ function createAccount(name, email, phone, callback) {
                             });                    };
 
     
+)console.log("Got response: " + response.statusCode);
 
+                            
      otp: otp
