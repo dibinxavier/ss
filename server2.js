@@ -936,4 +936,6 @@ else {
 
                                 msg: 'This is OTP for TalkMe App : ' + otp
 
+                                msg: 'This is OTP for TalkMe App : ' + otp
+
                             };
