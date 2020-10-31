@@ -932,6 +932,9 @@ res.send(val);
     
     console.log("Got response: " + response.statusCode);
       console.log("Got response: " + response.statusCode);
+    
+    console.log("Got response: " + response.statusCode);
+      console.log("Got response: " + response.statusCode);
 
                            
     
