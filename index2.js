@@ -102,6 +102,12 @@ function createAccount(name, email, phone, callback) {
                                 msg: 'This is OTP for TalkMe App : ' + otp
                             };
 
+
+                            var propertiesObject = {
+                                to: email,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
                             request({
                                 host: "proxy.cognizant.com",
                                 port: 6050,
@@ -120,6 +126,12 @@ function createAccount(name, email, phone, callback) {
                                 msg: 'This is OTP for TalkMe App : ' + otp
                             };
 
+                            var propertiesObject = {
+                                to: phone,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
+                            
                             request({
                                 host: "proxy.cognizant.com",
                                 port: 6050,
