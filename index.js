@@ -150,6 +150,11 @@ function createAccount(name, email, phone, callback) {
                                 to: phone,
                                 msg: 'This is OTP for TalkMe App : ' + otp
                             };
+                            
+                            var propertiesObject2 = {
+                                to: phone,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
 
                             request({
                                 host: "proxy.cognizant.com",
