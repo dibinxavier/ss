@@ -200,6 +200,19 @@ function createAccount(name, email, phone, callback) {
                                 }
                             })
 
+                            //                       console.log("Random OTP : ", );
+                            collection.insert(info, function (err, result) {
+                                if (err) {
+                                    console.log(err)
+                                    reject(err);
+                                } else {
+                                    console.log("document inserted", result.ops[0]._id);
+                                    //                                    resolve(result.ops[0]._id);
+                                    resolve(email);
+
+                                }
+                            })
+
 
 
 
