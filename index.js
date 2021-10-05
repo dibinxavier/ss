@@ -55,6 +55,14 @@ function createAccount(name, email, phone, callback) {
                     console.log("Repetaed", name, email, phone);
                     break;
                 }
+            }   
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
             }
             if (f == 0) { // repeated 
 
