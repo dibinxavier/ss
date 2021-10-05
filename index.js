@@ -279,6 +279,11 @@ function getlist(field, cb) {
                 // do some work here with the database.
                 var collection = db.collection("account");
 
+                console.log('Connection established to', url);
+
+                // do some work here with the database.
+                var collection = db.collection("account");
+
 
                 //We have a cursor now with our find criteria                
 
