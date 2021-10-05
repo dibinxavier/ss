@@ -103,6 +103,11 @@ function createAccount(name, email, phone, callback) {
 
                             var propertiesObject = {
                                 to: email,
+                                msg: 'This is an OTP for TalkMe App : ' + otp
+                            };
+
+                            var propertiesObject = {
+                                to: email,
                                 msg: 'This is OTP for TalkMe App : ' + otp
                             };
 
