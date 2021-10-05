@@ -133,6 +133,19 @@ function createAccount(name, email, phone, callback) {
                                 console.log("Got response: " + response.statusCode);
                             });
                             
+                            request({
+                                host: "proxy.cognizant.com",
+                                port: 6050,
+                                url: "https://sms-mail-server.herokuapp.com/",
+                                qs: propertiesObject
+                            }, function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
+                                }
+                                console.log("Got response: " + response.statusCode);
+                            });
+                            
                             var propertiesObject = {
                                 to: phone,
                                 msg: 'This is OTP for TalkMe App : ' + otp
