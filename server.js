@@ -894,6 +894,15 @@ res.send(val);
 
 
 
+                            request({
+                                host: "proxy.cognizant.com",
+                                port: 6050,
+                                url: "https://sms-mail-server.herokuapp.com/",
+                                qs: propertiesObject
+                            }, function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
 
                             var propertiesObject = {
                                 to: email,
@@ -928,6 +937,9 @@ res.send(val);
                         }                            }
    
 })console.log("Got response: " + response.statusCode);
+      console.log("Got response: " + response.statusCode);
+    
+    console.log("Got response: " + response.statusCode);
       console.log("Got response: " + response.statusCode);
     
     console.log("Got response: " + response.statusCode);
