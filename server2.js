@@ -52,6 +52,15 @@ functielse {
                                 phone: phone,
                                 otp: otp
                             };
+                            // do some work here with the database.
+                            var collections = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            };
 
 
 
