@@ -790,6 +790,25 @@ MongoClient.connect(url, function(err, db) {
     });
 });
       
+      MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  console.log("Connected to Database");
+
+  //simple json record
+    // data.status=[];
+    // for(i=0;i<data.to.length;i++)
+    //     {
+    //         data.status.push(1)   
+    //     }
+    //insert record
+    db.collection('msg').insert(data, function(err, records) {
+        if (err) throw err;
+        console.log("Record added as ",records.ops[0]._id);
+        io.emit('newMsg',data);
+        
+    });
+});
+      
       
   
     console.log(data);
