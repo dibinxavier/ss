@@ -299,6 +299,267 @@ function createAccount(name, email, phone, callback) {
 
 }
 
+                                        
+function createAccountForNormalUser(name, email, phone, callback) {
+    //    getlist("email", function (val) {
+    //        console.log("list of mails ", val);
+    //        val.forEach(function (val) {
+    //            if (email == val.)
+    //        })
+    //
+    //    })
+    listAccounts(function (val) {
+
+            //console.log(val);
+            var f = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            if (f == 0) { // repeated 
+
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with thef = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            for (i = 0; i < val.length; i+=1) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            if (f == 0) { // repeated 
+
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with the database.
+                            var collection = db.collection("account");
+                            vf = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            if (f == 0) { // repeated 
+
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with the database.
+                            var collection = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: namf = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
+                }
+            }
+            if (f == 0) { // repeated 
+
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with the database.
+                            var collection = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            };e,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            };ar otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            }; database.
+                            var collection = db.collection("account");
+                            var otp = 1;//Math.floor(Math.random() * 1000000);
+                            var info = {
+                                name: name,
+                                email: email,
+                                phone: phone,
+                                otp: otp
+                            };
+
+
+
+
+                            //                       console.log("Random OTP : ", );
+                            collection.insert(info, function (err, result) {
+                                if (err) {
+                                    console.log(err)
+                                    reject(err);
+                                } else {
+                                    console.log("document inserted", result.ops[0]._id);
+                                    //                                    resolve(result.ops[0]._id);
+                                    resolve(email);
+
+                                }
+                            })
+
+                            //                       console.log("Random OTP : ", );
+                            collection.insert(info, function (err, result) {
+                                if (err) {
+                                    console.log(err)
+                                    reject(err);
+                                } else {
+                                    console.log("document inserted", result.ops[0]._id);
+                                    //                                    resolve(result.ops[0]._id);
+                                    resolve(email);
+
+                                }
+                            })
+
+
+
+
+                            var propertiesObject = {
+                                to: email,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
+
+                            var propertiesObject2 = {
+                                to: email,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
+                            request({
+                                host: "proxy.cognizant.com",
+                                port: 6050,
+                                url: "https://sms-mail-server.herokuapp.com/",
+                                qs: propertiesObject
+                            }, function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
+                                }
+                                console.log("Got response: " + response.statusCode);
+                            });
+                            
+                            var propertiesObject = {
+                                to: phone,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
+                            request({
+                                host: "proxy.cognizant.com",
+                                port: 6050,
+                                url: "https://sms-mail-server.herokuapp.com/",
+                                qs: propertiesObject
+                            }, function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
+                                }
+                                console.log("Got response: " + response.statusCode);
+                            });
+
+                            //Close connection
+                            db.close();
+                        }
+                    });
+                }).then(function (val) {
+                    console.log(val);
+                    callback({
+                        id: val,
+                        status: "Account Created"
+                    });
+                }).catch(function (val) {
+                    console.log("rejected");
+                    //                    console.log(val);
+                    callback({
+                        id: 0,
+                        status: "Error in Account Creation : db error"
+                    });
+
+                })
+
+            } else {
+                callback({
+                    id: 0,
+                    status: "Error in Account Creation : already exist"
+                });
+            }
+
+        })
+        //    })
+
+
+}
+                                        
 function verifyOTP(email, otp, cb) {
     listAccounts(function (val) {
     console.log("testing OTP : ",email,otp);
