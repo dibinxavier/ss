@@ -580,6 +580,24 @@ app.post('/upload', function (req, res) {
     });
 });
 
+app.post('/uploaded', function (req, res) {
+    var sampleFile;
+
+    if (!req.files) {
+        res.send('No files were uploaded.');
+        return;
+    }
+
+    sampleFile = req.files.sampleFile;
+    sampleFile.mv('filename.jpg', function (err) {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.send('File uploaded!');
+        }
+    });
+});
+
 
 
 app.get('/', function (req, res) {
