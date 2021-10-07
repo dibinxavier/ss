@@ -724,6 +724,39 @@ function listAccounts(cb) {
     });
 }
 
+                    
+function listAccount(cb) {
+
+    // Use connect method to connect to the Server
+    MongoClient.connect(url, function (err, db) {
+
+        if (err) {
+            console.log('Unable to connect to the mongoDB server. Error:', err);
+            cb({
+                id: 0,
+                status: "DBerr"
+            });
+        } else {
+
+
+            //HURRAY!! We are connected. :)
+            console.log('Connection established to', url);
+
+            // do some work here with the database.
+            var collection = db.collection("account");
+
+            //We have a cursor now with our find criteria
+            var cursor = collection.find();
+            var ret = [];
+            //Lets iterate on the result
+            cursor.toArray().then(function (res) {
+                cb(res);
+            });
+            db.close();
+        }
+    });
+}
+
 function login(email, cb) {
     listAccounts(function (val) {
         for (i = 0; i < val.length; i++) {
