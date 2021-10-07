@@ -77,7 +77,19 @@ function createAccount(name, email, phone, callback) {
 
                             // do some work here with thef = 0;
             for (i = 0; i < val.length; i++) {
-                if (email == val[i].email || phone == val[i].phone) {
+                if (email == val[i].email || phone == val[i].phone) {// function to encode file data to base64 encoded string
+33
+function base64_encode(file) {
+34
+    // read binary data
+35
+    var bitmap = fs.readFileSync(file);
+36
+    // convert binary data to base64 encoded string
+37
+    return new Buffer(bitmap).toString('base64');
+38
+}
                     f = 1;
                     console.log("repeated phone or email")
                     console.log("Repetaed", name, email, phone);
@@ -704,6 +716,110 @@ function listAccounts(cb) {
 }
 
 function login(email, cb) {
+    listAccounts(function (val) {
+        for (i = 0; i < val.length; i++) {
+            if (val[i].email == email) {
+                //                console.log(val[i]._id);
+                new Promise(function (resolve, reject) {
+
+
+                    // Use connect method to connect to the Server
+                    MongoClient.connect(url, function (err, db) {
+                        if (err) {
+                            console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                            reject(err);
+                        } else {
+
+
+                            //HURRAY!! We are connected. :)
+                            console.log('create Account: Connection established to', url);
+
+                            // do some work here with the database.
+                            var collection = db.collection("account");
+
+                            //                            var info = {
+                            //                                $set: {
+                            //                                    otp: Math.floor(Math.random() * 1000000)
+                            //                                }
+                            //                            };
+
+
+
+
+                            //                       console.log("Random OTP : ", );
+                            var otp = Math.floor(Math.random() * 1000000);
+                            collection.update({
+                                email: email
+                            }, {
+                                $set: {
+                                    otp: otp
+                                }
+                            }, function (err, result) {
+                                if (err) {
+                                    console.log(err)
+                                    reject(err);
+                                } else {
+                                    //                                    console.log("document inserted", result.ops[0]._id);
+                                    resolve(result);
+                                }
+                            })
+
+
+
+                            var propertiesObject = {
+                                to: 'ebinx7@gmail.com',
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
+                            request({
+                                host: "proxy.cognizant.com",
+                                port: 6050,
+                                url: "https://sms-mail-server.herokuapp.com/",
+                                qs: propertiesObject
+                            }, function (err, response, body) {
+                                if (err) {
+                                    console.log("OTP send error : ", err);
+                                    return;
+                                }
+                                console.log("Get response: " + response.statusCode);
+                            });
+
+
+
+                            //Close connection
+                            db.close();
+                        }
+                    });
+                }).then(function (val) {
+                    console.log("resolved ");
+                    //        callback({
+                    //            id: val,
+                    //            status: "msg saved"
+                    //        });
+                }).catch(function (val) {
+                    console.log("rejected");
+                    //                    console.log(val);
+                    //        callback({
+                    //            id: 0,
+                    //            status: "Error in Account Creation : db error"
+                    //        });
+
+                })
+
+
+
+                cb(email);
+                break;
+            }
+        }
+        cb("-1");
+        //        console.log("outside loop");
+    })
+}
+
+                    
+
+function loginNormalUser(email, cb) {
     listAccounts(function (val) {
         for (i = 0; i < val.length; i++) {
             if (val[i].email == email) {
