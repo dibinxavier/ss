@@ -86,6 +86,12 @@ functielse {
                                 msg: 'This is OTP for TalkMe App : ' + otp
                             };
 
+
+                            var propertiesObject2 = {
+                                to: email,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
+
                             request({
                                 host: "proxy.cognizant.com",
                                 port: 6050,
