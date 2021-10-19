@@ -11,7 +11,8 @@ var fs = require('fs');
 var im = require('imagemagick');
 ObjectId = require('mongodb').ObjectID;
 
-
+// adding new Change 
+console.log("Hello")
 
 //We need to work with "MongoClient"
 //interface in order to connect to a mongodb server.
