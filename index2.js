@@ -13,7 +13,8 @@ ObjectId = require('mongodb').ObjectID;
 // new command
 console.log("test")
 
-
+// adding new code
+console.log("hello World")
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
 var MongoClient = mongodb.MongoClient;
