@@ -14,7 +14,8 @@ ObjectId = require('mongodb').ObjectID;
 // hello form other side
 const a = 23;
 
-
+// adding cosntant
+const name = 223
 
 //We need to work with "MongoClient" 
 //interface in order to connect to a mongodb server.
