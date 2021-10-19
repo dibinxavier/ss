@@ -1,2 +1,2 @@
 # S5_System_Software_Lab
- This repository contains all the programs that I have made for System Software Lab as per KTU Syllabus
+ This repository contains all the programs that I have made for System Software Lab as per KTU Syllabus 2012
