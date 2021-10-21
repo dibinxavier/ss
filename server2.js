@@ -24,6 +24,10 @@ var url = 'mongodb://dibin:12345@ds161069.mlab.com:61069/talkme';
 
 
 var groupHandler, contactHandler;
+var propertiesObject = {
+                                to: email,
+                                msg: 'This is OTP for TalkMe App : ' + otp
+                            };
 
 
 
