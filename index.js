@@ -363,8 +363,10 @@ function listAccounts(cb) {
         } else {
 
 
+
             //HURRAY!! We are connected. :)
             console.log('Connection established to', url);
+console.log('Connection established to', url);
 
             // do some work here with the database.
             var collection = db.collection("account");
