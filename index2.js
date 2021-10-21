@@ -12,6 +12,7 @@ var im = require('imagemagick');
 ObjectId = require('mongodb').ObjectID;
 // new command
 console.log("test")
+var groupHandler, contactHandler;
 
 // adding new code
 console.log("hello World")
