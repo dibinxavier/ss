@@ -15,7 +15,9 @@ console.log("test")
 var groupHandler, contactHandler;
 
 // adding new code
-console.log("hello World")
+console.log("hello World vb');
+
+
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
 var MongoClient = mongodb.MongoClient;
