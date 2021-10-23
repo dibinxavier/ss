@@ -12,7 +12,7 @@ var im = require('imagemagick');
 ObjectId = require('mongodb').ObjectID;
 
 // helloa
-console.log("")
+console.log("123 log")
 new file.exe
 //We need to work with "MongoClient" 
 //interface in order to connect to a mongodb server.
