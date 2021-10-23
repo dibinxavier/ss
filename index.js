@@ -964,7 +964,11 @@ socket.on('receivedAckBin77', function (data) {
             console.log("22t acknwoledge received : ");
 socket.on('receivedAckBin77', function (data) {
 
-            console.log("22st message received : ");
+            console.log("22st message received : ")app.use(exp.static('static'))
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+var mongodb = require('mongodb');
+var request = require('request');
     
             console.log("22t acknwoledge received : ");
 socket.on('receivedAckBin77', function (data) {
