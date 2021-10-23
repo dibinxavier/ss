@@ -889,7 +889,14 @@ function createAccount(name, email, phone, callback) {
      otp: otp
 })console.log("Got response: " + response.statusCode);
 
-                            });                    };
+                            });     ;
+            var f = 0;
+            for (i = 0; i < val.length; i++) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;               };
 
     
 )console.log("Got response: " + response.statusCode);
