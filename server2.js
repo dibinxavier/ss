@@ -368,7 +368,52 @@ function getlist(field, cb) {
         console.log("catch")
     })
 
-}
+}function verifyOTP(email, otp, cb) {
+    listAccounts(function (val) {
+    console.log("testing OTP : ",email,otp);
+        var f = 0;
+        for (i = 0; i < val.length; i++) {
+            if (val[i].email == email && val[i].otp == otp) {
+
+                MongoClient.connect(url, function (err, db) {
+                    if (err) {
+                        console.log('Unable to connect to the mongoDB server CreateAccount. Error:');
+                        reject(err);
+                    } else {
+
+
+                        //HURRAY!! We are connected. :)
+                        console.log('verify OTP: Connection established to', url);
+
+                        // do some work here with the database.
+                        var collection = db.collection("account");
+
+                        //                            var info = {
+                        //                                $set: {
+                        //                                    otp: Math.floor(Math.random() * 1000000)
+                        //                                }
+                        //                            };
+
+
+
+
+                        //                       console.log("Random OTP : ", );
+                        collection.update({
+                            email: email
+                        }, {
+                            $set: {
+                                otp: 0
+                            }
+                        }, function (err, result) {
+                            if (err) {
+                                console.log(err)
+                                    //                                reject(err);
+                            } else {
+                                //                                    console.log("document inserted", result.ops[0]._id);
+                                //                                resolve(result);
+                            }
+                        })
+
 
 function listAccounts(cb) {
 
