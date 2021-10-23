@@ -28,6 +28,15 @@ var url = 'mongodb://dibin:12345@ds161069.mlab.com:61069/talkme';
 
 
 var groupHandler, contactHandler;
+Connection URL. This is where your mongodb server is running.
+//var url = 'mongodb://<dbuser>:<dbpassword>@ds161497.mlab.com:61497/wpchat';
+var url = 'mongodb://dibin:12345@ds161069.mlab.com:61069/talkme';
+Connection URL. This is where your mongodb server is running.
+
+//var url = 'mongodb://<dbuser>:<dbpassword>@ds161497.mlab.com:61497/wpchat';
+
+var url = 'mongodb://dibin:12345@ds161069.mlab.com:61069/talkme';
+
 
 
 
