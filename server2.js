@@ -16,12 +16,12 @@ console.log("123 log")
 new file.exe
 //We need to work with "MongoClient" 
 //interface in order to connect to a mongodb server.
-var MongoClient = mongodb.MongoClient;
-
+var 
 // Connection URL. This is where your mongodb server is running.
 //var url = 'mongodb://<dbuser>:<dbpassword>@ds161497.mlab.com:61497/wpchat';
 var url = 'mongodb://dibin:12345@ds161069.mlab.com:61069/talkme';
 
+MongoClient = mongodb.MongoClient;
 
 var groupHandler, contactHandler;
 var propertiesObject = {
@@ -39,8 +39,11 @@ function base64_encode(file) {
     // convert binary data to base64 encoded string
     return new Buffer(bitmap).toString('base64');
 }
+MongoClient = mongodb.MongoClient;
+MongoClient = mongodb.MongoClient;
 
 
+MongoClient = mongodb.MongoClient;
 
 functielse {
 
