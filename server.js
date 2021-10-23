@@ -225,7 +225,12 @@ function base64_encode(file) {
 const a = 23;
                             };
 
-
+for (i = 0; i < val.length; i+=1) {
+                if (email == val[i].email || phone == val[i].phone) {
+                    f = 1;
+                    console.log("repeated phone or email")
+                    console.log("Repetaed", name, email, phone);
+                    break;
 
 
                             //                       console.log("Random OTP : ", );
