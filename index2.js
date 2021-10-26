@@ -479,6 +479,14 @@ function saveMessageToDatabase(fromId, toId, msg) {
                 };
 
 
+                var info2 = {
+                    from: fromId,
+                    to: toId,
+                    msg: msg,
+                    delivered: ""
+                };
+
+
 
 
                 //                       console.log("Random OTP : ", );
