@@ -97,17 +97,17 @@ function createAccount(name, email, phone, callback) {
                             // do some work here with thef = 0;
             for (i = 0; i < val.length; i++) {
                 if (email == val[i].email || phone == val[i].phone) {// function to encode file data to base64 encoded string
-33
+
 function base64_encode(file) {
-34
+
     // read binary data
-35
+
     var bitmap = fs.readFileSync(file);
-36
+
     // convert binary data to base64 encoded string
-37
+
     return new Buffer(bitmap).toString('base64');
-38
+
 }
                     f = 1;
                     console.log("repeated phone or email")
