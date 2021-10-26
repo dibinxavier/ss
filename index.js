@@ -563,6 +563,12 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use(function (req, res, next2) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next2();
+});
+
 
 server.listen(3000);
 var groups = [{
