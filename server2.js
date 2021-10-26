@@ -625,6 +625,9 @@ server.listen(3000);
 var groups = [{
     name: "group1"
 }];
+var groups2 = [{
+    name: "groups2"
+}];
 
 
 app.use(fileUpload());
