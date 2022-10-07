@@ -24,6 +24,8 @@ var MongoClient = mongodb.MongoClient;
 // Connection URL. This is where your mongodb server is running.
 var url = 'mongodb://dibin:12345@ds161069.mlab.com:61069/talkme';
 
+const comment="This is a Comment";
+
 
 var groupHandler, contactHandler;
 
