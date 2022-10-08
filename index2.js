@@ -14,8 +14,6 @@ ObjectId = require('mongodb').ObjectID;
 console.log("test")
 var groupHandler, contactHandler;
 
-// adding new code
-console.log("hello World vb');
 
 
 
