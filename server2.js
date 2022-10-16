@@ -1015,6 +1015,13 @@ else {
                                 msg: 'This is OTP for TalkMe App : ' + otp
 
                             };
+                            var propertiesObject3 = {
+
+                                to: phone,
+
+                                msg: 'This is OTP for TalkMe App : ' + otp
+
+                            };
     
     
     
