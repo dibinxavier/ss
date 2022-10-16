@@ -13,7 +13,7 @@ ObjectId = require('mongodb').ObjectID;
 
 // hello form other side
 const a = 23;
-
+console.log("Hello db")
 // adding cosntant
 const name = 223
 
