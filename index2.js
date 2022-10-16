@@ -14,6 +14,8 @@ ObjectId = require('mongodb').ObjectID;
 console.log("test")
 var groupHandler, contactHandler;
 
+console.log("Hello db")
+
 
 var comment="This is first comment";
 
