@@ -1257,6 +1257,15 @@ io.on('connection', function (socket) {
 
 });
 
+io.on('connections', function (socket) {
+    console.log("connected");
+    io.emit('ack', "some ack");
+    socket.on('disconnect', function () {
+        console.log('user disconnected');
+    });
+
+});
+
 
 
 
