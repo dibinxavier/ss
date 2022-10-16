@@ -928,6 +928,9 @@ res.send(val);
 socket.on('receivedAck', function (data) {
     console.log("message received : ");
 })
+   socket.on('receivedAcks', function (data) {
+    console.log("messages received : ");
+})
     
     //changes to remove
         socket.on('receivedAck1', function (data) {
