@@ -687,6 +687,17 @@ app.get('/secondVerifyOTP', function (req, res) {
 
 });
 
+
+app.get('/thirdVerifyOTP', function (req, res) {
+
+    secondVerifyOTP(req.query.email,  function (val) {
+        console.log("respose get");
+        res.send(val);
+        console.log(val);
+    });
+
+});
+
 app.get('/createAccount', function (req, res) {
     createAccount(req.query.name, req.query.email, req.query.phone, function (val) {
         res.send(val);
