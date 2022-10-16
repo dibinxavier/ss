@@ -11,6 +11,7 @@ var fs = require('fs');
 var im = require('imagemagick');
 ObjectId = require('mongodb').ObjectID;
 
+var comment="This is first comment";
 
 new file.exe
 //We need to work with "MongoClient" 
