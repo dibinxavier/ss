@@ -30,6 +30,7 @@ var MongoClient = mongodb.MongoClient;
 var url = 'mongodb://dibin:12345@ds161069.mlab.com:61069/talkme';
 
 var comment="This is first comment";
+var comment2="This is 2nd comment";
 
 var groupHandler, contactHandler;
 
