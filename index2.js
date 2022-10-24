@@ -13,6 +13,7 @@ ObjectId = require('mongodb').ObjectID;
 // new command
 console.log("test")
 var groupHandler, contactHandler;
+console.log("db")
 
 
 var comment="This is first comment";
