@@ -699,6 +699,14 @@ app.get('/accounts', function (req, resp) {
     });
 
 });
+app.get('/profile', function (req, resp) {
+
+    listAccounts(function (res) {
+        resp.send(res);
+        console.log(res);
+    });
+
+});
 
 
 
