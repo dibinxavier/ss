@@ -803,6 +803,16 @@ io.on('connection', function (socket) {
 });
 
 
+io.on('connection2', function (socket) {
+    console.log("connected");
+    io.emit('ack', "some ack");
+    socket.on('disconnect', function () {
+        console.log('user disconnected');
+    });
+
+});
+
+
 
 
 var from,to,msg;
