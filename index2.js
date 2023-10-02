@@ -19,6 +19,7 @@ console.log("Hello db")
 
 
 var comment="This is first comment";
+var comment2="This is 2nd comment";
 
 
 //We need to work with "MongoClient" interface in order to connect to a mongodb server.
