@@ -12,7 +12,7 @@ var im = require('imagemagick');
 ObjectId = require('mongodb').ObjectID;
 
 // adding new Change 
-console.log("Hello vb")
+console.log("Hello eb")
 // adding new Change 
 console.log("Hello db")
 
