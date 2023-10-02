@@ -27,7 +27,7 @@ var url = 'mongodb://dibin:12345@ds161069.mlab.com:61069/talkme';
 
 const comment="This is a Comment";
 
-var comment2="This is 2nd comment";
+var comment2="This is 2nd comment updated";
 
 var groupHandler, contactHandler;
 
