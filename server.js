@@ -61,6 +61,15 @@ function base64_encode_unhashed(file) {
 }
 
 
+// function to encode file data to base64 encoded string
+function base64_encode_hashed(file) {
+    // read binary data
+    var bitmap = fs.readFileSync(file);
+    // convert binary data to base64 encoded string
+    return new Buffer(bitmap).toString('base64');
+}
+
+
 
 function createAccount(name, email, phone, callback) {
     //    getlist("email", function (val) {
